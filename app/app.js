@@ -1,1 +1,5 @@
-var phonecatApp = angular.module('phonecatApp', []);
+'use strict';
+
+angular.module('phonecatApp', [
+	'phoneList'
+]);
