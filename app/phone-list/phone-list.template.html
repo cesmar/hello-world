@@ -14,16 +14,24 @@
 					<option value="age">Newest</option>
 				</select>
 			</p>
+			
+			<p>
+				Total number of phones: {{($ctrl.phones | filter:$ctrl.query).length}}
+			</p>  
 
 		</div>
 		<div class="col-md-10">
 
 			<ul class="phones">
-				<li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"> 
-					<span>{{phone.name}}</span> 
+				<li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbail"> 
+
+					<a href="#!/phones/{{phone.id}}" class="thumb">
+						<img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}">
+					</a>
+
+					<a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
 					<p>{{phone.snippet}}</p> 
 				</li> 
-				<p>Total number of phones: {{($ctrl.phones | filter:$ctrl.query).length}}</p>  
 			</ul>
 
 		</div>
