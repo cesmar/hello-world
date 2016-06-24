@@ -5,14 +5,16 @@
 	<title>Google Phone Gallery</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<!--	
+
 	<link rel="stylesheet" href="app.css">
-	-->
+
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
 	<script src="app.module.js"></script>
 	<script src="app.config.js"></script>
+	<script src="core/core.module.js"></script>
+	<script src="core/checkmark/checkmark.filter.js"></script>
 	<script src="phone-list/phone-list.module.js"></script>
 	<script src="phone-list/phone-list.component.js"></script>
 	<script src="phone-detail/phone-detail.module.js"></script>
@@ -20,7 +22,9 @@
 </head>
 <body>
 
-	<div ng-view></div>
+	<div class="view-container">
+		<div ng-view></div>
+	</div>
 
 </body>
 </html>
